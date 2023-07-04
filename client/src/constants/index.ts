@@ -54,7 +54,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Mobile App Developer",
     icon: mobile,
   },
   {
@@ -62,7 +62,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Blockchain Developer",
     icon: creator,
   },
 ];
@@ -287,7 +287,7 @@ const slides = [
   {
     title: "Website Designer",
     image: "/web-dev04.jpg",
-    image2: "/web-design-pc.png",
+    image2: "/web-design.png",
     description: "Design the Future of the Web: Bring your creative vision to life, crafting visually stunning and intuitive interfaces that captivate users and elevate brands to new heights"
   }
 ]

@@ -6,6 +6,7 @@ import ServicesSection from "./ServicesSection";
 import Testimonial from "./Testimonial";
 import CallToAction from "./CallToAction";
 import Skills from "./Skills";
+import HeroExt from "./HeroExt";
 
 export {
     AboutSection,
@@ -15,5 +16,6 @@ export {
     ServicesSection,
     Testimonial,
     CallToAction,
-    Skills
+    Skills,
+    HeroExt
 };

@@ -4,7 +4,8 @@ import LargeHeading from '@/components/ui/LargeHeading'
 import Paragraph from '@/components/ui/Paragraph'
 
 import type { Metadata } from 'next'
-import { AboutSection, BestPortfolio, BlogNews, CallToAction, Hero, ServicesSection, Skills, Testimonial } from '@/components/sections'
+import { AboutSection, BestPortfolio, BlogNews, CallToAction, Hero, ServicesSection, Skills, Testimonial, HeroExt } from '@/components/sections'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'PraiseDev | Home',
@@ -18,6 +19,7 @@ export default function Home() {
   return (
     <div className='flex flex-col'>
       <Hero/>
+      <HeroExt/>
       <AboutSection/>
       <ServicesSection/>
       <BestPortfolio/>
@@ -25,7 +27,7 @@ export default function Home() {
       <CallToAction/>
       <Skills/>
       <BlogNews/>
-      <div className="h-[600px]"></div>
+      <Footer/>
     </div>
   )
 }

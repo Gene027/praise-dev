@@ -23,7 +23,7 @@ const Hero: FC = () => {
             <Loader2 className='animate-spin infinite' />
           </div>
         ) : (
-          <Carousel indicators={false} duration={2000} interval={15000} >
+          <Carousel indicators={false} duration={2000} interval={10000} >
             {slides.map((slide) => (
               <Slide key={slide.title} image={slide.image} title={slide.title} image2={slide.image2} description={slide.description} />
             ))}

@@ -21,7 +21,7 @@ const Navbar: FC<NavbarProps> = ({ }) => {
     <MobileMenu />
 
     <div className='hidden lg:flex gap-5 mr-5'>
-      {navLinks.map((link) => (<Link key={link.id} href={`/${link.id}`}><Paragraph className={`${path == link.id && 'text-kelly-green'} hover:text-kelly-green`}>{link.title}</Paragraph></Link>))}
+      {navLinks.map((link) => (<Link key={link.id} href={`/${link.id}`}><Paragraph className={`${path == link.id && 'text-primary'} hover:text-primary`}>{link.title}</Paragraph></Link>))}
     </div>
   </div>
 }

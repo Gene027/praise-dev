@@ -21,7 +21,7 @@ const Slide: FC<SlideProps> = ({ title, image, image2, description }) => {
             <div className='absolute flex flex-col justify-center lg:flex-row h-full w-full bg-black/80'>
                 <div className='flex flex-1 justify-center lg:justify-start lg:items-center lg:ml-5 lg:mr-10'>
                     <div className='flex flex-col justify-center gap-5 items-center lg:items-start lg:justify-start max-w-sm lg:max-w-none'>
-                        <div className='h-24'>
+                        <div className='min-h-[76px]'>
                             <AnimatedText text={title} />
                         </div>
 

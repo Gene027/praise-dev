@@ -43,7 +43,7 @@
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-material-ui-carousel": "^3.4.2",
-    "react-tilt": "^1.0.2",
+    "react-parallax-tilt": "^1.7.151",
     "react-vertical-timeline-component": "^3.6.0",
     "sharp": "^0.31.3",
     "simplebar-react": "^3.2.1",

@@ -23,18 +23,10 @@ module.exports = {
       },
       colors: {
         ...colors,
-        'light-gold': '#f5bc51',
-        'dark-gold': '#533519',
-        'prussian-blue': '#0a2f48ff',
-        'aux-primary': '#050816',
-        'aux-green': '#00c853',
-        'mint-cream': '#f3faf3ff',
-        primary: "#294586",
+        primary: "#DC4830",
         secondary: "#E8B70C",
         tertiary: "#0a1f50cc",
-        "black-100": "#100d25",
-        "black-200": "#090325",
-        "white-100": "#f3f3f3",
+        "white1": "#FFFDFD",
       },
       keyframes: {
         moveFocus: {

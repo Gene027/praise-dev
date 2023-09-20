@@ -20,6 +20,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-inter)', ...fontFamily.sans],
+        raleway: 'var(--font-raleway)',
       },
       colors: {
         ...colors,

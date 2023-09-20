@@ -6,6 +6,7 @@ import Paragraph from '@/components/ui/Paragraph'
 import type { Metadata } from 'next'
 import { AboutSection, BestPortfolio, BlogNews, CallToAction, Hero, ServicesSection, Skills, Testimonial, HeroExt } from '@/components/sections'
 import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {
   title: 'PraiseDev | Home',
@@ -18,7 +19,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className='flex flex-col'>
-      <Hero/>
+      <Navbar/>
+      {/* <Hero/>
       <HeroExt/>
       <AboutSection/>
       <ServicesSection/>
@@ -27,7 +29,7 @@ export default function Home() {
       <CallToAction/>
       <Skills/>
       <BlogNews/>
-      <Footer/>
+      <Footer/> */}
     </div>
   )
 }

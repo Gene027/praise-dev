@@ -21,6 +21,7 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-inter)', ...fontFamily.sans],
         raleway: 'var(--font-raleway)',
+        dmSerifDisplay: 'var(--font-dmSerifDisplay)',
       },
       colors: {
         ...colors,
@@ -28,6 +29,8 @@ module.exports = {
         secondary: "#FAC025",
         tertiary: "#0a1f50cc",
         "white1": "#FFFDFD",
+        text: "#180401",
+        subText: "#505050",
       },
       keyframes: {
         moveFocus: {

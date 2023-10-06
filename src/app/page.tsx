@@ -4,7 +4,7 @@ import LargeHeading from '@/components/ui/LargeHeading'
 import Paragraph from '@/components/ui/Paragraph'
 
 import type { Metadata } from 'next'
-import { AboutSection, BestPortfolio, BlogNews, CallToAction, Hero, ServicesSection, Skills, Testimonial, HeroExt } from '@/components/sections'
+import { AboutSection, BestPortfolio, BlogNews, CallToAction, Hero, ServicesSection, Skills, Testimonial, HeroExt } from '@/components/HomeSections'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 
@@ -20,8 +20,8 @@ export default function Home() {
   return (
     <div className='flex flex-col'>
       <Navbar/>
-      {/* <Hero/>
-      <HeroExt/>
+      <Hero/>
+      {/* <HeroExt/>
       <AboutSection/>
       <ServicesSection/>
       <BestPortfolio/>

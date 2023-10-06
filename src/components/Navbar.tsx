@@ -15,16 +15,18 @@ interface NavbarProps {
 const Navbar: FC<NavbarProps> = ({ }) => {
   const path = usePathname().split('/')[1];
 
-  return <div className='sticky flex justify-between items-center gap-1 pt-[44px] px-[100px]'>
-    <Link href='/'>
-      <img src="/logo.png" alt="logo" className='w-[96px] h-[52px]' />
-    </Link>
-    <MobileMenu />
+  return <div className='sticky flex px-2 lg:px-[100px] py-3'>
+    <div className='flex w-full justify-between items-center'>
+      <Link href='/'>
+        <img src="/logo.png" alt="logo" className='w-[96px] h-[52px]' />
+      </Link>
+      <MobileMenu />
 
-    <div className='hidden lg:flex gap-10'>
-      {navLinks.map((link) => (<Link key={link.id} href={`/${link.id}`}><Paragraph className={`${path == link.id ? 'border-b-4 border-orange-400 text-[#180401] cursor-default' : 'hover:text-primary text-[#505050]'} py-1 capitalize`}>{link.title}</Paragraph></Link>))}
+      <div className='hidden lg:flex gap-10'>
+        {navLinks.map((link) => (<Link key={link.id} href={`/${link.id}`}><div className={`${path == link.id ? 'border-b-4 border-orange-400 text-text cursor-default' : 'hover:text-primary text-subText'} py-1 capitalize font-raleway text-base font-semibold`}>{link.title}</div></Link>))}
+      </div>
+      <Button variant="secondary" size="sm" className='hidden lg:flex border-text text-text font-raleway text-lg font-semibold'>Clients Portal</Button>
     </div>
-    <Button variant="secondary" size="sm" className='hidden lg:flex border-[#180401] text-[#180401] font-raleway'>Clients Portal</Button>
   </div>
 }
 

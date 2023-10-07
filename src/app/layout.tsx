@@ -5,7 +5,7 @@ import { Toaster } from '@/components/ui/toast'
 import Providers from '@/components/Providers'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const raleway = Raleway({ subsets: ['latin'], variable: '--font-raleway', weight: ['100', '200', '300', '400', '500', '600'] })
+const raleway = Raleway({ subsets: ['latin'], variable: '--font-raleway', weight: ['100', '200','400','500','600','900'] })
 const dmSerifDisplay = DM_Serif_Display({
   subsets: ['latin'], variable: '--font-dmSerifDisplay',
   weight: '400'

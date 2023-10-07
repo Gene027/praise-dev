@@ -12,7 +12,7 @@ const BackButton: FC<BackButtonProps> = ({ className, ...props }) => {
   const router = useRouter()
   return (
     <Button
-      variant='ghost'
+      variant={'text'}
       {...props}
       onClick={() => router.back()}
       className={cn('w-fit', className)}>

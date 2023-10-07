@@ -29,7 +29,7 @@ const CopyButton: FC<CopyButtonProps> = ({
           type: 'success',
         })
       }}
-      variant='ghost'
+      variant='text'
       className={cn('', className)}>
       <Copy className='h-5 w-5' />
     </Button>

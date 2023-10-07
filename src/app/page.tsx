@@ -10,7 +10,7 @@ import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {
   title: 'PraiseDev | Home',
-  description: 'This is my portfolio website',
+  description: 'Digital dreams built',
   icons: {
     icon: '/logo.png'
   }

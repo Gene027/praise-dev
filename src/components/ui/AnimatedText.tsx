@@ -36,10 +36,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ text, typingSpeed = 100 }) 
     };
   }, [text, typingSpeed, currentCharacterIndex]);
 
-  return <LargeHeading
-    size='lg'
-    className='three-d text-white'>{typedText}
-  </LargeHeading>
+  return <>{typedText}</>
 
 };
 

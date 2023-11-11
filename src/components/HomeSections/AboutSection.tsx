@@ -4,7 +4,6 @@ import { FC } from 'react';
 import LargeHeading from '../ui/LargeHeading';
 import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
-import { services } from '@/constants';
 import { fadeIn, staggerContainer, textVariant } from '@/lib/motion';
 import Image, { StaticImageData } from 'next/image';
 import Paragraph from '../ui/Paragraph';
@@ -51,50 +50,28 @@ const ServiceCard: FC<ServiceCardProps> = ({ index, title, icon }) => (
 
 const About: FC = () => {
   return (
-    <>
-      <motion.section
-        variants={staggerContainer()}
-        initial='hidden'
-        whileInView='show'
-        viewport={{ once: true, amount: 0.25 }}
-        className='px-5 lg:px-20'
-      >
-        <div className='mt-10 flex flex-wrap gap-5 justify-center'>
-          {services.map((service: Service, index: number) => (
-            <ServiceCard key={service.title} index={index} {...service} />
-          ))}
+    <div className='py-[100px] flex w-full justify-center'>
+      <div className='flex max-w-[967px] w-full justify-between'>
+        <div className='w-[37%] flex flex-col gap-6'>
+          <div className='p-1 flex w-full flex-col gap-8'>
+            <div className='flex flex-col w-full gap-[20px]'>
+              <div className='flex p-3 rounded-[200px] border border-solid border-[#D7D7D7] w-fit'>
+                <div className='flex gap-2 items-center'>
+                  <div className='py-2 px-6 bg-secondary flex justify-center items-center rounded-[100px] text-text font-raleway font-semibold text-xs max-w-[71px]'>About</div>
+                  <Paragraph className='font-raleway text-base font-medium'>Get to know PraiseDev</Paragraph>
+                </div>
+              </div>
+
+              <Paragraph className='font-dmSerifDisplay text-[40px] font-normal'>A new site for your agency? It’s here.</Paragraph>
+            </div>
+
+            <div></div>
+          </div>
+          learn more
         </div>
-
-        <motion.div variants={textVariant()} >
-          
-            <LargeHeading size="sm" className='mt-10 tracking-wide text-primary'>
-              Overview
-            </LargeHeading>
-          <Paragraph>
-            Get to Know Me and My Expertise
-          </Paragraph>
-        </motion.div>
-
-        <div className='flex gap-20 justify-between'>
-
-          <Image src='/my-profile.jpg' alt='Official Picture' height={300} width={300} quality={100} className='aspect-square' />
-
-          <motion.div
-            variants={fadeIn('', '', 0.1, 1)}
-            className='flex flex-col gap-5'
-          >
-            <Paragraph>
-              <img src='/3-gold.png' alt='Years of experience' className='float-left mr-4 h-20 w-20' />
-              Years of experience as a skilled software developer, my passion lies in creating innovative and efficient solutions that address the unique needs and goals of my clients. Through close collaboration and a deep understanding of their requirements, I strive to deliver exceptional results. My approach to software development is driven by a combination of technical proficiency and a strong emphasis on user experience. By leveraging my comprehensive skill set, I develop scalable and user-friendly solutions that effectively solve real-world problems. I believe that technology should enhance the lives of users and provide seamless experiences.
-            </Paragraph>
-
-            <Button variant="primary" size='lg' className='w-[150px]' onClick={downloadCv}>
-              Learn More
-            </Button>
-          </motion.div>
-        </div>
-      </motion.section>
-    </>
+        <div className='w-[54%]'>Right</div>
+      </div>
+    </div>
   );
 };
 

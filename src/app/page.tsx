@@ -21,8 +21,9 @@ export default function Home() {
     <div className='flex flex-col'>
       <Navbar/>
       <Hero/>
-      {/* <HeroExt/>
+      <HeroExt/>
       <AboutSection/>
+      {/* 
       <ServicesSection/>
       <BestPortfolio/>
       <Testimonial/>

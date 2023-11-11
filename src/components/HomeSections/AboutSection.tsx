@@ -88,7 +88,7 @@ const About: FC = () => {
               Years of experience as a skilled software developer, my passion lies in creating innovative and efficient solutions that address the unique needs and goals of my clients. Through close collaboration and a deep understanding of their requirements, I strive to deliver exceptional results. My approach to software development is driven by a combination of technical proficiency and a strong emphasis on user experience. By leveraging my comprehensive skill set, I develop scalable and user-friendly solutions that effectively solve real-world problems. I believe that technology should enhance the lives of users and provide seamless experiences.
             </Paragraph>
 
-            <Button variant='outline' size='lg' className='w-[150px]' onClick={downloadCv}>
+            <Button variant="primary" size='lg' className='w-[150px]' onClick={downloadCv}>
               Learn More
             </Button>
           </motion.div>

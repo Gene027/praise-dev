@@ -14,7 +14,7 @@ const page: FC = () => {
           <div className='flex flex-col items-center gap-6 text-center'>
             <Link
               className={buttonVariants({
-                variant: 'ghost',
+                variant:"text",
                 className: 'w-fit',
               })}
               href='/'>

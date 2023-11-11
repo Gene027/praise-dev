@@ -20,21 +20,17 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-inter)', ...fontFamily.sans],
+        raleway: 'var(--font-raleway)',
+        dmSerifDisplay: 'var(--font-dmSerifDisplay)',
       },
       colors: {
         ...colors,
-        'light-gold': '#f5bc51',
-        'dark-gold': '#533519',
-        'prussian-blue': '#0a2f48ff',
-        'aux-primary': '#050816',
-        'aux-green': '#00c853',
-        'mint-cream': '#f3faf3ff',
-        primary: "#294586",
-        secondary: "#E8B70C",
+        primary: "#DC4830",
+        secondary: "#FAC025",
         tertiary: "#0a1f50cc",
-        "black-100": "#100d25",
-        "black-200": "#090325",
-        "white-100": "#f3f3f3",
+        "white1": "#FFFDFD",
+        text: "#180401",
+        subText: "#505050",
       },
       keyframes: {
         moveFocus: {

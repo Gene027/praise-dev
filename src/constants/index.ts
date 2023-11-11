@@ -20,7 +20,6 @@ import {
   tesla,
   shopify,
   carrent,
-  jobit,
   tripguide,
   threejs,
 } from "../assets";

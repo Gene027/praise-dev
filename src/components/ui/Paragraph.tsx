@@ -1,15 +1,14 @@
 import * as React from 'react'
 import { VariantProps, cva } from 'class-variance-authority'
-
 import { cn } from '@/lib/utils'
 
 export const paragraphVariants = cva(
-  'text-text',
+  'text-text font-raleway text:sm',
   {
     variants: {
       size: {
-        default: 'text-sm sm:text-base',
-        sm: 'text-sm sm:text-base',
+        default: '',
+        sm: '',
       },
     },
     defaultVariants: {
@@ -28,7 +27,7 @@ const Paragraph = React.forwardRef<HTMLParagraphElement, ParagraphProps>(
       <p
         ref={ref}
         {...props}
-        className={cn(paragraphVariants({ size, className }))}>
+        className={cn(paragraphVariants({ size }), className)}>
         {children}
       </p>
     )

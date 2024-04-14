@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils'
 import '@/styles/globals.css'
+import '@/styles/global.scss'
 import { Inter, Raleway, DM_Serif_Display } from 'next/font/google'
 import { Toaster } from '@/components/ui/toast'
 import Providers from '@/components/Providers'
@@ -18,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cn('bg-[#FFFDFD] text-text antialiased', inter.variable, raleway.variable, dmSerifDisplay.variable)}>
-      <body className='min-h-screen'>
+      <body className='min-h-screen font-raleway'>
         <Providers>
           <Toaster position='bottom-right' />
           <main>{children}</main>

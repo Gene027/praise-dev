@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cn('bg-[#FFFDFD] text-text antialiased', inter.variable, raleway.variable, dmSerifDisplay.variable)}>
-      <body className='min-h-screen'>
+      <body className='min-h-screen font-raleway'>
         <Providers>
           <Toaster position='bottom-right' />
           <main>{children}</main>

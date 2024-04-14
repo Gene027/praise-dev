@@ -31,7 +31,8 @@ module.exports = {
         "white1": "#FFFDFD",
         text: "#180401",
         subText: "#505050",
-        bg: '#FFFDFD'
+        bg: '#FFFDFD',
+        light: "#F2F2F2"
       },
       keyframes: {
         moveFocus: {

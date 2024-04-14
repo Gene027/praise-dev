@@ -45,16 +45,16 @@ const technologies = [
     icon: '/tech/typescript.png',
   },
   {
-    name: "React JS",
-    icon: '/tech/reactjs.png',
-  },
-  {
     name: "Redux",
     icon: '/tech/redux.png',
   },
   {
     name: "Tailwind CSS",
     icon: '/tech/tailwind.png',
+  },
+  {
+    name: "React JS",
+    icon: '/tech/reactjs.png',
   },
   {
     name: "Node JS",

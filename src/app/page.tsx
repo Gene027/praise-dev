@@ -23,14 +23,13 @@ export default function Home() {
       <Hero/>
       <HeroExt/>
       <AboutSection/>
-      {/* 
       <ServicesSection/>
-      <BestPortfolio/>
-      <Testimonial/>
-      <CallToAction/>
-      <Skills/>
-      <BlogNews/>
-      <Footer/> */}
+      {/* <BestPortfolio/> */}
+      {/* <Testimonial/> */}
+      {/* <CallToAction/> */}
+      {/* <Skills/> */}
+      {/* <BlogNews/> */}
+      {/* <Footer/> */}
     </div>
   )
 }

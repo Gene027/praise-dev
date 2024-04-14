@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils'
 import '@/styles/globals.css'
+import '@/styles/global.scss'
 import { Inter, Raleway, DM_Serif_Display } from 'next/font/google'
 import { Toaster } from '@/components/ui/toast'
 import Providers from '@/components/Providers'

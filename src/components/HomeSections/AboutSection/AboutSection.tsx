@@ -24,11 +24,11 @@ const About: FC = () => {
                 <ProductCard key={idx} description={p.desc} title={p.title} />
               ))}
 
-              <Link href={"/about"} className="flex gap-1 items-center">
-                <span className=" text-primary font-raleway font-semibold text-xl">
+              <Link href={"/about"} className="flex gap-1 items-center group">
+                <span className=" text-primary group-hover:text-[#B03A26] font-raleway font-semibold text-xl">
                   learn more
                 </span>{" "}
-                <FaArrowRightLong className="text-primary w-4 h-4" />
+                <FaArrowRightLong className="text-primary group-hover:text-[#B03A26] w-4 h-4" />
               </Link>
             </div>
           </div>

@@ -1,15 +1,12 @@
 "use client";
 
-import { FC, useEffect, useState } from "react";
-import { slides } from "@/constants";
-import { Loader2 } from "lucide-react";
+import { FC, useState } from "react";
 import Paragraph from "../ui/Paragraph";
 import LargeHeading from "../ui/LargeHeading";
 import AnimatedText from "../ui/AnimatedText";
 import Carousel from "../ui/Carousel";
 
 const Hero: FC = () => {
-  const [isLoading, setIsLoading] = useState<Boolean>(true);
 
   return (
     <>

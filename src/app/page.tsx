@@ -1,10 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import LargeHeading from '@/components/ui/LargeHeading'
-import Paragraph from '@/components/ui/Paragraph'
-
 import type { Metadata } from 'next'
-import { AboutSection, BestPortfolio, BlogNews, CallToAction, Hero, ServicesSection, Skills, Testimonial, HeroExt } from '@/components/HomeSections'
+import { AboutSection, BestPortfolio, BlogNews, CallToAction, Hero, ServicesSection, Testimonial, HeroExt } from '@/components/HomeSections'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 
@@ -24,11 +19,10 @@ export default function Home() {
       <HeroExt/>
       <AboutSection/>
       <ServicesSection/>
-      {/* <BestPortfolio/> */}
-      {/* <Testimonial/> */}
+      <BestPortfolio/>
+      <Testimonial/>
+      <BlogNews/>
       {/* <CallToAction/> */}
-      {/* <Skills/> */}
-      {/* <BlogNews/> */}
       {/* <Footer/> */}
     </div>
   )

@@ -14,7 +14,6 @@ const Carousel: FC<CarouselProps> = ({ }) => {
     const [nextButtonPulse, setNextButtonPulse] = useState(false)
 
     function shuffleSlides(direction: 'next' | 'prev') {
-        const numberOfSlides = slides.length;
 
         if (direction === 'next') {
 

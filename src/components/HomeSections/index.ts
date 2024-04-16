@@ -1,11 +1,10 @@
 import AboutSection from "./AboutSection/AboutSection";
-import BestPortfolio from "./BestPortfolio";
-import BlogNews from "./BlogNews";
+import BestPortfolio from "./Portfolio/BestPortfolio";
+import BlogNews from "./BlogSection/BlogNews";
 import Hero from "./Hero";
 import ServicesSection from "./ServicesSection/ServicesSection";
-import Testimonial from "./Testimonial";
+import Testimonial from "./Testimonial/Testimonial";
 import CallToAction from "./CallToAction";
-import Skills from "./Skills";
 import HeroExt from "./HeroExt";
 
 export {
@@ -16,6 +15,5 @@ export {
     ServicesSection,
     Testimonial,
     CallToAction,
-    Skills,
     HeroExt
 };

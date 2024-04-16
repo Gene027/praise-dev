@@ -39,6 +39,18 @@ module.exports = {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(100%)' },
         },
+        fadeIn: {
+          '0%': { opacity: 0.5 },
+          '100%': { opacity: 1 },
+        },
+        fadeOut: {
+          '0%': { opacity: 1 },
+          '100%': { opacity: 0.5 },
+        }
+      },
+      animation: {
+        fadeIn: 'fadeIn 500ms ease-out forwards',
+        fadeOut: 'fadeOut 500ms ease-out forwards'
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",

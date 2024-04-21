@@ -22,8 +22,8 @@ export default function Home() {
       <BestPortfolio/>
       <Testimonial/>
       <BlogNews/>
-      {/* <CallToAction/> */}
-      {/* <Footer/> */}
+      <CallToAction/>
+      <Footer/>
     </div>
   )
 }

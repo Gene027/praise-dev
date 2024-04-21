@@ -4,7 +4,6 @@ import { FC } from 'react'
 import MobileMenu from '@/components/MobileMenu'
 import Link from 'next/link'
 import { navLinks } from '@/constants'
-import Paragraph from './ui/Paragraph'
 import { usePathname } from 'next/navigation'
 import { Button } from './ui/Button'
 

@@ -1,12 +1,12 @@
 "use client";
 import { FC } from "react";
-import Paragraph from "../../ui/Paragraph";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { productsPoints } from "./contents";
 import ProductCard from "./ProductCard";
 import Link from "next/link";
 import BusinessGrowth from "./BusinessGrowth";
 import TitleTag from "../TitleTag";
+import Paragraph from "@/components/ui/Paragraph";
 
 const About: FC = () => {
   return (

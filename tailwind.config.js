@@ -31,6 +31,8 @@ module.exports = {
         "white1": "#FFFDFD",
         text: "#180401",
         subText: "#505050",
+        miniSubText: '#7D7D7D',
+        normalHover: '#C6412B',
         bg: '#FFFDFD',
         light: "#F2F2F2"
       },

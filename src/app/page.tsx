@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { AboutSection, BestPortfolio, BlogNews, CallToAction, Hero, ServicesSection, Testimonial, HeroExt } from '@/components/HomeSections'
-import Footer from '@/components/Footer'
+import Footer from '@/components/Footer/Footer'
 import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {

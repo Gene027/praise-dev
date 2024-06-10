@@ -2,7 +2,6 @@ import { FC, useState } from 'react'
 import Paragraph from './Paragraph';
 import { Slide, slides } from '@/constants';
 import Image from 'next/image';
-import { toast } from './toast';
 interface CarouselProps {
 
 }

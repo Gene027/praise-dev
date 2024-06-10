@@ -1,0 +1,22 @@
+@import "../../../styles/index.scss";
+
+.team_card {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 33px;
+  width: 319px;
+  height: 305px;
+  background: linear-gradient(
+    117.25deg,
+    #ededed 0%,
+    rgba(237, 237, 237, 0) 100.11%
+  );
+  border: 2px solid #fffdfd;
+  backdrop-filter: blur(25px);
+  z-index: 0;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}

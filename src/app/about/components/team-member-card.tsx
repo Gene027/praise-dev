@@ -26,7 +26,7 @@ const TeamMembers: FC<TeamMembersProps> = ({ image, name, role, socials }) => {
             title="Name and role"
             className="flex flex-col gap-3 max-w-[163px]"
           >
-            <Paragraph className="text-center text-[#00000] font-bold text-2xl">
+            <Paragraph className="text-center text-[#00000] text-2xl">
               {name}
             </Paragraph>
             <Paragraph className="text-center text-base text-subText">

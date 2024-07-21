@@ -23,7 +23,7 @@ const TeamMembers: FC<TeamMembersProps> = ({ image, name, role, socials }) => {
       <div className={styles.team_card}>
         <div className="flex flex-col gap-6 items-center">
           <div
-            title="Name and role"
+            aria-label="Name and Role"
             className="flex flex-col gap-3 max-w-[163px]"
           >
             <Paragraph className="text-center text-[#00000] text-2xl">
@@ -33,7 +33,7 @@ const TeamMembers: FC<TeamMembersProps> = ({ image, name, role, socials }) => {
               {role}
             </Paragraph>
           </div>
-          <div title="Socials" className="flex gap-2">
+          <div aria-label="socials" className="flex gap-2">
             {socials.twitter && (
               <a
                 className="w-12 h-12 border cursor-pointer border-solid border-subText p-2 rounded-full flex justify-center items-center"

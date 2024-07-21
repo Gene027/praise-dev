@@ -17,7 +17,7 @@ const OurTeam: FC<OurTeamProps> = ({}) => {
         </Paragraph>
       </div>
 
-      <div title="team" className="flex gap-12">
+      <div aria-label="team" className="flex gap-12">
         {theTeam.map((team, index) => (
           <TeamMembers key={index} {...team} />
         ))}

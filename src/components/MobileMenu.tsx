@@ -1,54 +1,77 @@
 'use client'
 
-import { useState } from 'react';
-import { IconButton, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme } from '@mui/material';
-import { Menu, X } from 'lucide-react';
-import { Info, LayoutDashboard, Loader2, User } from 'lucide-react'
+import { useState, useEffect, ReactNode } from 'react'
+import { HiMenu, HiX } from 'react-icons/hi'
+import { navLinks } from '@/constants'
 import Link from 'next/link'
-import { Button } from './ui/Button'
-import { toast } from './ui/toast'
-import { navLinks } from '@/constants';
+import { createPortal } from 'react-dom'
 
-const MobileMenu: React.FC = () => {
-  //Auth
-  // const { data: session } = useSession()
-  const [isLoading, setIsLoading] = useState<boolean>(false)
-  const [open, setOpen] = useState<boolean>(false)
-  const theme = useTheme();
-  const isMobile: boolean | undefined = useMediaQuery(theme.breakpoints.down('sm'))
+const MobileMenu = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const toggleMenu = () => {
-    setOpen(!open)
-  };
+    setIsOpen(!isOpen)
+  }
+
+  const menuContent = (
+    <div>
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`fixed inset-0 bg-black bg-opacity-50 transition-opacity ${
+          isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+        style={{ zIndex: 9998 }}
+        onClick={toggleMenu}
+      />
+
+      {/* Sliding Menu Panel */}
+      <div
+        className={`fixed top-0 left-0 w-[280px] h-full bg-white transform transition-transform duration-300 ease-in-out ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+        style={{ zIndex: 9999 }}
+      >
+        {/* Logo Section */}
+        <div className="p-4 border-b border-gray-100">
+          <img src="/logo.png" alt="logo" className="w-12 h-12" />
+        </div>
+
+        {/* Navigation Links */}
+        <nav className="py-4">
+          {navLinks.map((link) => (
+            <Link
+              key={link.id}
+              href={`/${link.id}`}
+              className="block px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200"
+              onClick={toggleMenu}
+            >
+              {link.title}
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </div>
+  )
 
   return (
-    <>
-      {isMobile && (
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          onClick={toggleMenu}
-        >
-          {open ? <X /> : <Menu />}
-        </IconButton>
-      )}
-      <Drawer
-        anchor="left"
-        open={open && isMobile}
-        onClose={toggleMenu}
-        PaperProps={{ style: { width: 300 } }}
+    <div className="lg:hidden">
+      {/* Menu Button */}
+      <button
+        onClick={toggleMenu}
+        className="p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
+        style={{ zIndex: 9999, position: 'relative' }}
+        aria-label="Toggle menu"
       >
-        <div>
-          <img src="/logo.png" alt="logo" className='w-12 h-12 ml-3' />
-        </div>
-        <List>
-          {navLinks.map((link) => (<ListItem button>
-            <ListItemText key={link.id} primary={link.title} className='border-gray-100 border-b pb-3'/>
-          </ListItem>))}
-        </List>
-      </Drawer>
-    </>
+        {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+      </button>
+
+      {mounted && createPortal(menuContent, document.body)}
+    </div>
   )
 }
 

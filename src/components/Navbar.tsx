@@ -1,32 +1,261 @@
 'use client'
 
-import { FC } from 'react'
-import MobileMenu from '@/components/MobileMenu'
+import { FC, useState, useEffect } from 'react'
 import Link from 'next/link'
-import { navLinks } from '@/constants'
 import { usePathname } from 'next/navigation'
+import { HiMenu, HiX } from 'react-icons/hi'
+import { navLinks } from '@/constants'
 import { Button } from './ui/Button'
+import { cn } from '@/lib/utils'
 
 interface NavbarProps {
-
+  className?: string
 }
 
-const Navbar: FC<NavbarProps> = ({ }) => {
-  const path = usePathname().split('/')[1];
+const Navbar: FC<NavbarProps> = ({ className }) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
+  const currentPath = pathname.split('/')[1]
 
-  return <div className='sticky flex px-2 lg:px-[100px] py-3'>
-    <div className='flex w-full justify-between items-center'>
-      <Link href='/'>
-        <img src="/logo.png" alt="logo" className='w-[96px] h-[52px]' />
-      </Link>
-      <MobileMenu />
+  useEffect(() => {
+    setMounted(true)
+    
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10
+      setScrolled(isScrolled)
+    }
 
-      <div className='hidden lg:flex gap-10'>
-        {navLinks.map((link) => (<Link key={link.id} href={`/${link.id}`}><div className={`${path == link.id ? 'border-b-4 border-orange-400 text-text cursor-default' : 'hover:text-primary text-subText'} py-1 capitalize font-raleway text-base font-semibold`}>{link.title}</div></Link>))}
-      </div>
-      <Button variant="secondary" size="sm" className='hidden lg:flex border-text text-text font-raleway text-lg font-semibold'>Clients Portal</Button>
-    </div>
-  </div>
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false)
+  }, [pathname])
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isMobileMenuOpen])
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false)
+  }
+
+  if (!mounted) {
+    return (
+      <nav className={cn(
+        'sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100',
+        className
+      )}>
+        <div className="flex px-4 sm:px-6 lg:px-12 xl:px-16 py-3">
+          <div className="flex w-full justify-between items-center">
+            <Link href="/" className="flex-shrink-0">
+              <img 
+                src="/logo.png" 
+                alt="PraiseDev Logo" 
+                className="w-[96px] h-[52px] object-contain"
+                loading="eager"
+              />
+            </Link>
+            <div className="flex items-center gap-4">
+              <div className="hidden lg:flex items-center gap-8">
+                {navLinks.map((link) => (
+                  <div key={link.id} className="h-6 w-16 bg-gray-200 animate-pulse rounded" />
+                ))}
+              </div>
+              <div className="hidden lg:block w-[190px] h-[52px] bg-gray-200 animate-pulse rounded-xl" />
+              <div className="lg:hidden w-6 h-6 bg-gray-200 animate-pulse rounded" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    )
+  }
+
+  return (
+    <>
+      <nav className={cn(
+        'sticky top-0 z-50 transition-all duration-300',
+        scrolled 
+          ? 'bg-white/95 backdrop-blur-sm shadow-md border-b border-gray-100' 
+          : 'bg-white',
+        className
+      )}>
+        <div className="flex px-4 sm:px-6 lg:px-12 xl:px-16 py-3">
+          <div className="flex w-full justify-between items-center">
+            {/* Logo */}
+            <Link 
+              href="/" 
+              className="flex-shrink-0 transition-transform hover:scale-105 duration-200"
+              aria-label="PraiseDev Home"
+            >
+              <img 
+                src="/logo.png" 
+                alt="PraiseDev Logo" 
+                className="w-[96px] h-[52px] object-contain"
+                loading="eager"
+              />
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center gap-8">
+              {navLinks.map((link) => {
+                const isActive = currentPath === link.id
+                return (
+                  <Link 
+                    key={link.id} 
+                    href={`/${link.id}`}
+                    className="group relative"
+                  >
+                    <div className={cn(
+                      'py-2 px-1 capitalize font-raleway text-base font-semibold transition-all duration-200',
+                      isActive 
+                        ? 'text-text cursor-default' 
+                        : 'text-subText hover:text-primary'
+                    )}>
+                      {link.title}
+                      {/* Active indicator */}
+                      <div className={cn(
+                        'absolute -bottom-1 left-0 h-1 bg-primary transition-all duration-300',
+                        isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                      )} />
+                    </div>
+                  </Link>
+                )
+              })}
+            </div>
+
+            {/* Desktop CTA Button */}
+            <Button 
+              variant="secondary" 
+              size="sm" 
+              className="hidden lg:flex border-primary text-primary font-raleway text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-200"
+            >
+              Clients Portal
+            </Button>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleMobileMenu}
+              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? (
+                <HiX size={24} className="text-text" />
+              ) : (
+                <HiMenu size={24} className="text-text" />
+              )}
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Menu Overlay */}
+      {mounted && (
+        <>
+          {/* Backdrop */}
+          <div
+            className={cn(
+              'fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300',
+              isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            )}
+            onClick={toggleMobileMenu}
+            aria-hidden="true"
+          />
+
+          {/* Mobile Menu */}
+          <div
+            className={cn(
+              'fixed top-0 left-0 h-full w-[300px] sm:w-[350px] bg-white z-50 transform transition-transform duration-300 ease-out lg:hidden shadow-2xl',
+              isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+            )}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile navigation menu"
+          >
+            {/* Mobile Menu Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-100">
+              <Link 
+                href="/" 
+                onClick={handleLinkClick}
+                className="transition-transform hover:scale-105 duration-200"
+              >
+                <img 
+                  src="/logo.png" 
+                  alt="PraiseDev Logo" 
+                  className="w-[80px] h-[43px] object-contain" 
+                />
+              </Link>
+              <button
+                onClick={toggleMobileMenu}
+                className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                aria-label="Close menu"
+              >
+                <HiX size={20} className="text-text" />
+              </button>
+            </div>
+
+            {/* Mobile Menu Navigation */}
+            <nav className="flex flex-col py-6">
+              {navLinks.map((link, index) => {
+                const isActive = currentPath === link.id
+                return (
+                  <Link
+                    key={link.id}
+                    href={`/${link.id}`}
+                    onClick={handleLinkClick}
+                    className={cn(
+                      'relative px-6 py-4 text-lg font-raleway font-medium transition-all duration-200 border-l-4',
+                      isActive 
+                        ? 'text-primary bg-primary/5 border-primary' 
+                        : 'text-subText hover:text-primary hover:bg-gray-50 border-transparent hover:border-primary/30'
+                    )}
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    <span className="capitalize">{link.title}</span>
+                    {isActive && (
+                      <div className="absolute right-4 top-1/2 -translate-y-1/2">
+                        <div className="w-2 h-2 bg-primary rounded-full" />
+                      </div>
+                    )}
+                  </Link>
+                )
+              })}
+            </nav>
+
+            {/* Mobile Menu Footer */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-100">
+              <Button 
+                variant="primary" 
+                size="md" 
+                className="w-full font-raleway text-lg font-semibold"
+                onClick={handleLinkClick}
+              >
+                Clients Portal
+              </Button>
+            </div>
+          </div>
+        </>
+      )}
+    </>
+  )
 }
 
 export default Navbar

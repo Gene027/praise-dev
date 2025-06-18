@@ -10,7 +10,7 @@ const Hero: FC = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-9 lg:px-24 lg:py-10">
+      <div className="flex flex-col gap-9 px-4 sm:px-6 lg:px-12 xl:px-16 py-6 lg:py-10">
         <div className="flex justify-between">
           <div className="flex flex-1 w-1/3 items-center">
             <Paragraph className="font-raleway font-medium max-w-[210px]">

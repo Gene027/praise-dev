@@ -49,11 +49,21 @@ module.exports = {
         fadeOut: {
           '0%': { opacity: 1 },
           '100%': { opacity: 0.5 },
+        },
+        'scroll-left': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'scroll-right': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
         }
       },
       animation: {
         fadeIn: 'fadeIn 500ms ease-out forwards',
-        fadeOut: 'fadeOut 500ms ease-out forwards'
+        fadeOut: 'fadeOut 500ms ease-out forwards',
+        'scroll-left': 'scroll-left 30s linear infinite',
+        'scroll-right': 'scroll-right 45s linear infinite',
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",

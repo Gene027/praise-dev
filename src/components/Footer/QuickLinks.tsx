@@ -1,31 +1,26 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
 
 const QuickLinks = () => {
   return (
-    <div className="flex flex-col gap-6">
-      <h1 className="font-raleway text-lg font-semibold text-bg">Quick Links</h1>
-      <Link className="font-raleway text-sm text-bg" href="/about">
-        About
-      </Link>
-      <Link className="font-raleway text-sm text-bg" href="/services">
-        Services
-      </Link>
-      <Link className="font-raleway text-sm text-bg" href="/portfolio">
-        Portfolio
-      </Link>
-      <Link className="font-raleway text-sm text-bg" href="/blog">
-        Blog
-      </Link>
-      <Link className="font-raleway text-sm text-bg" href="/contact">
-        Contact
-      </Link>
-      <Link className="font-raleway text-sm text-bg" href="/privacy-policy">
-        Privacy Policy
-      </Link>
-      <Link className="font-raleway text-sm text-bg" href="/terms-condition">
-        T&CS
-      </Link>
+    <div className="flex flex-col gap-4 md:gap-6">
+      <h1 className="font-raleway text-base md:text-lg font-semibold text-bg">
+        Quick Links
+      </h1>
+      <div className="flex flex-col gap-2 md:gap-3">
+        <Link href="/about" className="text-bg font-raleway text-xs md:text-sm hover:text-primary transition-colors duration-200">
+          About Us
+        </Link>
+        <Link href="/portfolio" className="text-bg font-raleway text-xs md:text-sm hover:text-primary transition-colors duration-200">
+          Our Portfolio
+        </Link>
+        <Link href="/services" className="text-bg font-raleway text-xs md:text-sm hover:text-primary transition-colors duration-200">
+          Services
+        </Link>
+        <Link href="/contact" className="text-bg font-raleway text-xs md:text-sm hover:text-primary transition-colors duration-200">
+          Contact Us
+        </Link>
+      </div>
     </div>
   );
 };

@@ -37,6 +37,10 @@ module.exports = {
         bg: '#FFFDFD',
         light: "#F2F2F2"
       },
+      perspective: {
+        '1000': '1000px',
+        '1500': '1500px',
+      },
       keyframes: {
         moveFocus: {
           '0%': { transform: 'translateX(0)' },
@@ -57,6 +61,19 @@ module.exports = {
         'scroll-right': {
           '0%': { transform: 'translateX(-50%)' },
           '100%': { transform: 'translateX(0)' },
+        },
+        'flip-in': {
+          '0%': { transform: 'rotateY(-90deg)', opacity: '0' },
+          '100%': { transform: 'rotateY(0deg)', opacity: '1' },
+        },
+        'flip-out': {
+          '0%': { transform: 'rotateY(0deg)', opacity: '1' },
+          '100%': { transform: 'rotateY(90deg)', opacity: '0' },
+        },
+        'card-shuffle': {
+          '0%': { transform: 'translateX(0) scale(1)' },
+          '50%': { transform: 'translateX(20px) scale(1.05)' },
+          '100%': { transform: 'translateX(0) scale(1)' },
         }
       },
       animation: {
@@ -64,6 +81,9 @@ module.exports = {
         fadeOut: 'fadeOut 500ms ease-out forwards',
         'scroll-left': 'scroll-left 30s linear infinite',
         'scroll-right': 'scroll-right 45s linear infinite',
+        'flip-in': 'flip-in 0.6s ease-out',
+        'flip-out': 'flip-out 0.3s ease-in',
+        'card-shuffle': 'card-shuffle 0.8s ease-in-out',
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",

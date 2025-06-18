@@ -4,22 +4,22 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 const FooterIntro = () => {
   return (
-    <div className="flex flex-col gap-6 max-w-[243px]">
-      <img className="w-[113px] h-[61px]" src="logo-dark.png" alt="Logo" />
-      <p className="text-bg font-raleway text-sm ">
+    <div className="flex flex-col gap-4 md:gap-6 max-w-full md:max-w-[243px]">
+      <img className="w-[90px] h-[48px] md:w-[113px] md:h-[61px]" src="logo-dark.png" alt="Logo" />
+      <p className="text-bg font-raleway text-xs md:text-sm leading-relaxed">
         Our company thrives on unity in diversity, with a nationwide team
         collaborating remotely to transform your digital dreams into reality, no
         matter where you are, no matter where we are.
       </p>
       <div className="flex gap-3">
         <a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
-          <FaFacebook className="w-7 h-7 text-white" />
+          <FaFacebook className="w-6 h-6 md:w-7 md:h-7 text-white hover:text-primary transition-colors duration-200" />
         </a>
         <a href="http://x.com" target="_blank" rel="noopener noreferrer">
-          <FaSquareXTwitter className="w-7 h-7 text-white" />
+          <FaSquareXTwitter className="w-6 h-6 md:w-7 md:h-7 text-white hover:text-primary transition-colors duration-200" />
         </a>
         <a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
-          <FaInstagramSquare className="w-7 h-7 text-white" />
+          <FaInstagramSquare className="w-6 h-6 md:w-7 md:h-7 text-white hover:text-primary transition-colors duration-200" />
         </a>
       </div>
     </div>

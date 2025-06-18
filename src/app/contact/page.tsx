@@ -8,11 +8,13 @@ interface ContactProps {}
 
 const ContactPage: FC<ContactProps> = ({}) => {
   return (
-    <div className="min-h-screen flex flex-col justify-between">
+    <>
       <Navbar />
-      <ContactUs />
-      <Footer />
-    </div>
+      <main className="min-h-screen flex flex-col justify-between">
+        <ContactUs />
+        <Footer />
+      </main>
+    </>
   );
 };
 

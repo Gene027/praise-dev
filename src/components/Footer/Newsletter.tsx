@@ -36,23 +36,23 @@ const Newsletter = () => {
   };
   
   return (
-    <div className="flex flex-col gap-6">
-      <h1 className="font-raleway text-lg font-semibold text-bg">
+    <div className="flex flex-col gap-4 md:gap-6">
+      <h1 className="font-raleway text-base md:text-lg font-semibold text-bg">
         Newsletter Sign up
       </h1>
-      <p className="font-raleway text-sm text-bg">
+      <p className="font-raleway text-xs md:text-sm text-bg">
         Sign up and receive exclusive offers.
       </p>
-      <div className="flex gap-2">
+      <div className="flex flex-col sm:flex-row gap-2">
         <input
           type="email"
           placeholder="Enter your email"
-          className="bg-bg rounded-lg w-[197px] h-[45px] p-2 text-xs font-raleway font-semibold text-miniSubText"
+          className="bg-bg rounded-lg w-full sm:w-[160px] md:w-[197px] h-[40px] md:h-[45px] p-2 text-xs font-raleway font-semibold text-miniSubText"
           onChange={handleChange}
         />
         <div
           onClick={handleSubscribe}
-          className="bg-primary hover:bg-normalHover flex justify-center items-center w-[50px] h-[45px] cursor-pointer rounded-lg"
+          className="bg-primary hover:bg-normalHover flex justify-center items-center w-full sm:w-[45px] md:w-[50px] h-[40px] md:h-[45px] cursor-pointer rounded-lg transition-colors duration-200"
         >
           <BsSendFill className="text-white w-4 h-4" />
         </div>

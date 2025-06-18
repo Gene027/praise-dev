@@ -60,10 +60,10 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
   if (!mounted) {
     return (
       <nav className={cn(
-        'sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100',
+        'fixed top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100',
         className
-      )}>
-        <div className="flex px-4 sm:px-6 lg:px-12 xl:px-16 py-3">
+      )} style={{ position: 'fixed' }}>
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 py-3">
           <div className="flex w-full justify-between items-center">
             <Link href="/" className="flex-shrink-0">
               <img 
@@ -91,13 +91,13 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
   return (
     <>
       <nav className={cn(
-        'sticky top-0 z-50 transition-all duration-300',
+        'fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300',
         scrolled 
           ? 'bg-white/95 backdrop-blur-sm shadow-md border-b border-gray-100' 
           : 'bg-white',
         className
-      )}>
-        <div className="flex px-4 sm:px-6 lg:px-12 xl:px-16 py-3">
+      )} style={{ position: 'fixed' }}>
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 py-3">
           <div className="flex w-full justify-between items-center">
             {/* Logo */}
             <Link 
@@ -167,6 +167,9 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
         </div>
       </nav>
 
+      {/* Spacer to prevent content from going under fixed navbar */}
+      <div className="h-[76px]" />
+
       {/* Mobile Menu Overlay */}
       {mounted && (
         <>
@@ -213,7 +216,7 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
             </div>
 
             {/* Mobile Menu Navigation */}
-            <nav className="flex flex-col py-6">
+            <nav className="flex flex-col pt-6">
               {navLinks.map((link, index) => {
                 const isActive = currentPath === link.id
                 return (

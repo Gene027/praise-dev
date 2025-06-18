@@ -1,7 +1,7 @@
 "use client";
 import { FC } from "react";
 import { Team } from "../constants/the-team";
-import styles from "./index.module.scss";
+
 import Paragraph from "../../../components/ui/Paragraph";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
@@ -20,7 +20,7 @@ const TeamMembers: FC<TeamMembersProps> = ({ image, name, role, socials }) => {
         />
       </div>
 
-      <div className={styles.team_card}>
+      <div className="flex justify-center items-end pb-8 w-[319px] h-[305px] bg-gradient-to-r from-gray-200 to-transparent border-2 border-white1 backdrop-blur-md z-0 rounded-t-[100px] rounded-b-[50px]">
         <div className="flex flex-col gap-6 items-center">
           <div
             aria-label="Name and Role"

@@ -4,6 +4,7 @@ import Paragraph from "@/components/ui/Paragraph";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { RiCalendarLine } from "react-icons/ri";
+
 interface BlogCardProps {
   blog: Blog;
 }
@@ -11,32 +12,32 @@ interface BlogCardProps {
 const BlogCard = ({ blog }: BlogCardProps) => {
   const { author, title, description, date, image, authorImage } = blog;
   return (
-    <div className="flex flex-col flex-1 w-[283px] rounded-lg bg-bg">
+    <div className="flex flex-col flex-1 w-full md:w-[283px] rounded-lg bg-bg min-h-[500px] md:min-h-auto">
       <div className="relative w-full">
         <img
           src={image}
           alt={title}
-          className="w-full h-[232px] object-cover rounded-t-lg"
+          className="w-full h-[200px] md:h-[232px] object-cover rounded-t-lg"
         />
-        <div className="absolute inset-0 w-full p-5 flex items-end">
-          <div className="flex gap-2 bg-bg p-2 rounded-[100px] min-w-[161px] h-[36px] items-center">
+        <div className="absolute inset-0 w-full p-4 md:p-5 flex items-end">
+          <div className="flex gap-2 bg-bg p-2 rounded-[100px] min-w-[140px] md:min-w-[161px] h-[32px] md:h-[36px] items-center">
             <img
-              className="rounded-full w-[28px] h-[28px]"
+              className="rounded-full w-[24px] h-[24px] md:w-[28px] md:h-[28px]"
               src={authorImage}
               alt="Author image"
             />
-            <p className="text-text text-base font-raleway font-medium">
+            <p className="text-text text-sm md:text-base font-raleway font-medium">
               {author}
             </p>
           </div>
         </div>
       </div>
 
-      <div className="w-full min-h-[249px] z-20 mt-[-5px] p-5 rounded-lg flex flex-col gap-5">
-        <Paragraph className="font-dmSerifDisplay text-xl text-text">
+      <div className="w-full flex-1 z-20 mt-[-5px] p-4 md:p-5 rounded-lg flex flex-col gap-4 md:gap-5">
+        <Paragraph className="font-dmSerifDisplay text-lg md:text-xl text-text">
           {title}
         </Paragraph>
-        <Paragraph className="text-subText text-base font-raleway">
+        <Paragraph className="text-subText text-sm md:text-base font-raleway">
           {description}
         </Paragraph>
         <div className="flex gap-2">
@@ -45,8 +46,8 @@ const BlogCard = ({ blog }: BlogCardProps) => {
             {date}
           </Paragraph>
         </div>
-        <Link href={"/blog"} className="flex gap-1 items-center group">
-          <span className=" text-primary group-hover:text-[#B03A26] font-raleway font-semibold text-xl">
+        <Link href={"/blog"} className="flex gap-1 items-center group mt-auto">
+          <span className="text-primary group-hover:text-[#B03A26] font-raleway font-semibold text-lg md:text-xl">
             Read more
           </span>
           <FaArrowRightLong className="text-primary group-hover:text-[#B03A26] w-4 h-4" />

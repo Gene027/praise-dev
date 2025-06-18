@@ -8,7 +8,7 @@ interface BestPortfolioProps {}
 
 const BestPortfolio: FC<BestPortfolioProps> = ({}) => {
   return (
-    <div className="py-[100px] flex w-full items-center flex-col gap-16">
+    <div className="py-[60px] md:py-[100px] flex w-full items-center flex-col gap-10 md:gap-16 px-4 md:px-0">
       <TitleTag title="Projects" description="Our best works" />
       <PortfolioSlide />
       <Link href="/portfolio">

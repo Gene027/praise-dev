@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
-import "@/styles/global.scss";
 import { Inter, Raleway, DM_Serif_Display } from "next/font/google";
 import { Toaster } from "@/components/ui/toast";
 
@@ -33,9 +32,9 @@ export default function RootLayout({
     >
       <body className="min-h-screen font-raleway">
         <Toaster position="top-right" />
-        <main className="w-full max-w-[1440px] mx-auto relative">
+        <div className="w-full max-w-[1440px] mx-auto relative">
           {children}
-        </main>
+        </div>
       </body>
     </html>
   );

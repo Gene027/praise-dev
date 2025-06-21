@@ -26,7 +26,10 @@ const About: FC = () => {
                 ))}
               </div>
 
-              <Link href={"/about"} className="flex gap-1 items-center group mt-2">
+              <Link
+                href={"/about"}
+                className="flex gap-1 items-center group mt-2"
+              >
                 <span className=" text-primary group-hover:text-[#B03A26] font-raleway font-semibold text-xl">
                   Learn more
                 </span>{" "}
@@ -36,7 +39,7 @@ const About: FC = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-[54%] flex items-center relative pl-0 md:pl-4 mt-8 md:mt-0">
+        <div className="w-full md:max-w-[525px] flex items-center relative pl-0 md:pl-4 mt-8 md:mt-0">
           <div className="hidden md:block">
             <BusinessGrowth />
           </div>
@@ -47,7 +50,7 @@ const About: FC = () => {
               src="/homepage/Rectangle3.png"
               alt="background"
             />
-            <div className="absolute top-[-20px] left-[-20px] md:top-0 md:left-[-16px] flex w-full h-full items-center">
+            <div className="absolute top-[-20px] left-[20px] md:top-0 md:left-[-16px] flex w-full h-full items-center">
               <img
                 className="h-[340px] w-[320px] md:h-[489px] md:w-[442px] object-cover rounded-lg"
                 src="/homepage/Rectangle4.png"

@@ -32,7 +32,7 @@ const Hero: FC = () => {
 
             <div className="text-center">
               <Paragraph className="font-raleway font-medium text-base sm:text-lg max-w-sm mx-auto">
-                Over 3 years of experiences helping diverse of brands in all
+                Over 7 years of experiences helping diverse of brands in all
                 categories
               </Paragraph>
             </div>
@@ -69,7 +69,7 @@ const Hero: FC = () => {
           <div className="flex-1 w-1/3 flex justify-end">
             <div className="h-full flex flex-col justify-between gap-8 xl:gap-12">
               <Paragraph className="font-raleway font-medium max-w-[210px] text-base xl:text-lg">
-                Over 3 years of experiences helping diverse of brands in all
+                Over 7 years of experiences helping diverse of brands in all
                 categories
               </Paragraph>
 

@@ -141,15 +141,6 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
               })}
             </div>
 
-            {/* Desktop CTA Button */}
-            <Button 
-              variant="secondary" 
-              size="sm" 
-              className="hidden lg:flex border-primary text-primary font-raleway text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-200"
-            >
-              Clients Portal
-            </Button>
-
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMobileMenu}
@@ -242,18 +233,6 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
                 )
               })}
             </nav>
-
-            {/* Mobile Menu Footer */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-100">
-              <Button 
-                variant="primary" 
-                size="md" 
-                className="w-full font-raleway text-lg font-semibold"
-                onClick={handleLinkClick}
-              >
-                Clients Portal
-              </Button>
-            </div>
           </div>
         </>
       )}

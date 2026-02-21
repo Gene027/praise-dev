@@ -38,7 +38,7 @@ const AboutUs: FC<AboutUsProps> = ({}) => {
 
         <div
           title="About-hero-image"
-          className="relative w-[564px] h-[574px] mt-[66px] mx-auto lg:mx-0 transform scale-75 sm:scale-90 lg:scale-100"
+          className="relative w-full max-w-[564px] aspect-[564/574] mt-[66px] mx-auto lg:mx-0"
         >
           <svg
             width="315"

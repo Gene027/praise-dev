@@ -143,11 +143,15 @@ const Form: FC<FormProps> = ({}) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full bg-primary flex flex-col p-6 sm:p-8 md:p-10 lg:p-12 gap-8 sm:gap-12 md:gap-16">
+    <form
+      onSubmit={handleSubmit}
+      className="w-full flex flex-col p-6 sm:p-8 md:p-10 lg:p-12 gap-8 sm:gap-12 md:gap-16 rounded-2xl
+        bg-white/70 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.08)]"
+    >
       <div className="flex flex-col gap-5 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="flex flex-col gap-3">
-            <label className="text-bg font-raleway text-base sm:text-lg">
+            <label className="text-text font-raleway text-base sm:text-lg font-medium">
               First Name <span className="text-red-400">*</span>
             </label>
             <input
@@ -155,8 +159,8 @@ const Form: FC<FormProps> = ({}) => {
               value={formData.firstName}
               onChange={(e) => handleInputChange("firstName", e.target.value)}
               className={`py-2 px-3 rounded-xl border border-solid ${
-                errors.firstName ? "border-red-400" : "border-[#C9C9C9]"
-              } bg-inherit placeholder:font-raleway placeholder:text-[#C9C9C9] placeholder:text-sm sm:placeholder:text-base placeholder:font-normal focus:outline-none focus:border-white text-bg font-raleway text-base sm:text-lg`}
+                errors.firstName ? "border-red-400" : "border-gray-300"
+              } bg-white/60 placeholder:font-raleway placeholder:text-gray-400 placeholder:text-sm sm:placeholder:text-base placeholder:font-normal focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary text-text font-raleway text-base sm:text-lg`}
               placeholder="John"
             />
             {errors.firstName && (
@@ -165,7 +169,7 @@ const Form: FC<FormProps> = ({}) => {
           </div>
 
           <div className="flex flex-col gap-3">
-            <label className="text-bg font-raleway text-base sm:text-lg">
+            <label className="text-text font-raleway text-base sm:text-lg font-medium">
               Last Name <span className="text-red-400">*</span>
             </label>
             <input
@@ -173,8 +177,8 @@ const Form: FC<FormProps> = ({}) => {
               value={formData.lastName}
               onChange={(e) => handleInputChange("lastName", e.target.value)}
               className={`py-2 px-3 rounded-xl border border-solid ${
-                errors.lastName ? "border-red-400" : "border-[#C9C9C9]"
-              } bg-inherit placeholder:font-raleway placeholder:text-[#C9C9C9] placeholder:text-sm sm:placeholder:text-base placeholder:font-normal focus:outline-none focus:border-white text-bg font-raleway text-base sm:text-lg`}
+                errors.lastName ? "border-red-400" : "border-gray-300"
+              } bg-white/60 placeholder:font-raleway placeholder:text-gray-400 placeholder:text-sm sm:placeholder:text-base placeholder:font-normal focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary text-text font-raleway text-base sm:text-lg`}
               placeholder="Doe"
             />
             {errors.lastName && (
@@ -185,7 +189,7 @@ const Form: FC<FormProps> = ({}) => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="flex flex-col gap-3">
-            <label className="text-bg font-raleway text-base sm:text-lg">
+            <label className="text-text font-raleway text-base sm:text-lg font-medium">
               Email <span className="text-red-400">*</span>
             </label>
             <input
@@ -193,8 +197,8 @@ const Form: FC<FormProps> = ({}) => {
               value={formData.email}
               onChange={(e) => handleInputChange("email", e.target.value)}
               className={`py-2 px-3 rounded-xl border border-solid ${
-                errors.email ? "border-red-400" : "border-[#C9C9C9]"
-              } bg-inherit placeholder:font-raleway placeholder:text-[#C9C9C9] placeholder:text-sm sm:placeholder:text-base placeholder:font-normal focus:outline-none focus:border-white text-bg font-raleway text-base sm:text-lg`}
+                errors.email ? "border-red-400" : "border-gray-300"
+              } bg-white/60 placeholder:font-raleway placeholder:text-gray-400 placeholder:text-sm sm:placeholder:text-base placeholder:font-normal focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary text-text font-raleway text-base sm:text-lg`}
               placeholder="example@gmail.com"
             />
             {errors.email && (
@@ -203,7 +207,7 @@ const Form: FC<FormProps> = ({}) => {
           </div>
           
           <div className="flex flex-col gap-3">
-            <label className="text-bg font-raleway text-base sm:text-lg">
+            <label className="text-text font-raleway text-base sm:text-lg font-medium">
               Subject <span className="text-red-400">*</span>
             </label>
             <input
@@ -211,8 +215,8 @@ const Form: FC<FormProps> = ({}) => {
               value={formData.subject}
               onChange={(e) => handleInputChange("subject", e.target.value)}
               className={`py-2 px-3 rounded-xl border border-solid ${
-                errors.subject ? "border-red-400" : "border-[#C9C9C9]"
-              } bg-inherit placeholder:font-raleway placeholder:text-[#C9C9C9] placeholder:text-sm sm:placeholder:text-base placeholder:font-normal focus:outline-none focus:border-white text-bg font-raleway text-base sm:text-lg`}
+                errors.subject ? "border-red-400" : "border-gray-300"
+              } bg-white/60 placeholder:font-raleway placeholder:text-gray-400 placeholder:text-sm sm:placeholder:text-base placeholder:font-normal focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary text-text font-raleway text-base sm:text-lg`}
               placeholder="E-commerce Website"
             />
             {errors.subject && (
@@ -222,15 +226,15 @@ const Form: FC<FormProps> = ({}) => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label className="text-bg font-raleway text-base sm:text-lg">
+          <label className="text-text font-raleway text-base sm:text-lg font-medium">
             Your Message <span className="text-red-400">*</span>
           </label>
           <textarea
             value={formData.message}
             onChange={(e) => handleInputChange("message", e.target.value)}
             className={`w-full min-h-[150px] sm:min-h-[190px] p-4 sm:p-5 rounded-xl border border-solid ${
-              errors.message ? "border-red-400" : "border-[#C9C9C9]"
-            } bg-inherit placeholder:font-raleway placeholder:text-[#C9C9C9] placeholder:text-sm sm:placeholder:text-base placeholder:font-normal focus:outline-none focus:border-white text-bg font-raleway text-base sm:text-lg resize-vertical`}
+              errors.message ? "border-red-400" : "border-gray-300"
+            } bg-white/60 placeholder:font-raleway placeholder:text-gray-400 placeholder:text-sm sm:placeholder:text-base placeholder:font-normal focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary text-text font-raleway text-base sm:text-lg resize-vertical`}
             placeholder="Enter your message (minimum 10 characters)"
           />
           {errors.message && (
@@ -242,7 +246,7 @@ const Form: FC<FormProps> = ({}) => {
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="text-primary bg-bg hover:bg-slate-100 self-center text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
+        className="self-center text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? "Sending..." : "Submit"}
       </Button>

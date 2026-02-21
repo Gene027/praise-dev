@@ -41,14 +41,6 @@ const PortfolioHero: FC = () => {
                   Get in Touch
                 </Button>
               </Link>
-              <a
-                href="/Praise-Anosike-Resume.pdf"
-                download
-                className="inline-flex items-center justify-center h-[52px] px-6 rounded-[12px] border-[1.5px] border-solid border-text text-text font-raleway font-semibold hover:border-primary hover:text-primary transition-colors"
-              >
-                <FiDownload className="mr-2" />
-                Download CV
-              </a>
             </div>
 
             <div className="flex items-center gap-4 mt-4">

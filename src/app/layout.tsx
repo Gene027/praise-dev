@@ -32,7 +32,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen font-raleway">
         <Toaster position="top-right" />
-        <div className="w-full max-w-[1440px] mx-auto relative">
+        <div className="w-full max-w-[1440px] mx-auto relative overflow-x-hidden">
           {children}
         </div>
       </body>

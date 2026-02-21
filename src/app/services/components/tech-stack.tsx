@@ -60,7 +60,7 @@ const TechStack: FC = () => {
           </Paragraph>
         </div>
 
-        <div className="relative">
+        <div className="relative overflow-hidden">
           <div className="flex animate-scroll">
             <div className="flex gap-8 min-w-max">
               {[...technologies, ...technologies].map((tech, idx) => {

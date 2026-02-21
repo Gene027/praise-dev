@@ -29,7 +29,7 @@ const HeroExt: FC = () => {
       </div>
 
       {/* Main infinite scrolling ticker */}
-      <div className="relative py-4 sm:py-6 min-h-[80px] sm:min-h-[100px]">
+      <div className="relative py-4 sm:py-6 min-h-[80px] sm:min-h-[100px] overflow-hidden">
         {/* Primary scrolling track */}
         <div className="flex animate-scroll-left hover:pause items-center">
           {extendedTechnologies.map((skill, index) => (

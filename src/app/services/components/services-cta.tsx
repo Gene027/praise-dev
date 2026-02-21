@@ -36,7 +36,7 @@ const ServicesCTA: FC = () => {
                   <Button
                     variant="primary"
                     size="sm"
-                    className="w-full lg:w-auto bg-white text-primary hover:bg-light"
+                    className="w-full px-4 lg:w-auto bg-white text-primary hover:bg-light"
                   >
                     <FiMessageCircle className="mr-2" />
                     Start a Conversation

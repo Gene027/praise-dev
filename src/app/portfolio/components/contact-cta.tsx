@@ -37,7 +37,7 @@ const ContactCTA: FC = () => {
                   <Button
                     variant="primary"
                     size="sm"
-                    className="bg-white text-primary hover:bg-light"
+                    className="w-full bg-white text-primary hover:bg-light"
                   >
                     <FiMail className="mr-2" />
                     Contact Me

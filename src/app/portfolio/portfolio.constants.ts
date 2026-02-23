@@ -86,14 +86,6 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
-    id: 1,
-    title: "Ontop",
-    description: "Mobile-first services marketplace with API-driven discovery, geo-location search, and microservices backend supporting payments and trust.",
-    image: "/portfolio/ontop.png",
-    technologies: ["React Native", "Expo", "NestJS", "AWS EC2", "PM2", "GitHub Actions"],
-    featured: true,
-  },
-  {
     id: 2,
     title: "Ekklesia Music Streaming",
     description: "Radio-style streaming platform with admin workflow to schedule playlists/programs and content management dashboard.",
@@ -102,12 +94,36 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: 6,
+    title: "e-Limu Learning Platform",
+    description: "EdTech platform with Paystack payments, scheduling subsystem, and product analytics integration.",
+    image: "/portfolio/elimu.png",
+    technologies: ["React", "Node.js", "Paystack", "Mixpanel"],
+    featured: true,
+  },
+  {
+    id: 5,
+    title: "Kidapay Cryptocurrency Platform",
+    description: "Cryptocurrency payment platform supporting BTC, LTC, ALGO, USDT, TRON, SOL with automated reconciliation.",
+    image: "/portfolio/crypto.png",
+    technologies: ["Node.js", "WebSockets", "Blockchain", "PostgreSQL"],
+    featured: true,
+  },
+  {
+    id: 1,
+    title: "Ontop",
+    description: "Mobile-first services marketplace with API-driven discovery, geo-location search, and microservices backend supporting payments and trust.",
+    image: "/portfolio/ontop.png",
+    technologies: ["React Native", "Expo", "NestJS", "AWS EC2", "PM2", "GitHub Actions"],
+    featured: false,
+  },
+  {
     id: 3,
     title: "Choplife Gaming Platform",
     description: "Multi-region gaming platform with affiliate system, KYC operations, and tournament management across 5 African countries.",
     image: "/portfolio/choplife.png",
     technologies: ["NestJS", "React", "PostgreSQL", "RabbitMQ", "Redis"],
-    featured: true,
+    featured: false,
   },
   {
     id: 4,
@@ -115,22 +131,6 @@ export const projects: Project[] = [
     description: "Enterprise wholesale platform with competitive pricing intelligence, inventory management, and customer operations.",
     image: "/portfolio/eze.png",
     technologies: ["Next.js", "NestJS", "Puppeteer", "PostgreSQL"],
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "Multi-Currency Crypto Platform",
-    description: "Cryptocurrency payment platform supporting BTC, LTC, ALGO, USDT, TRON, SOL with automated reconciliation.",
-    image: "/portfolio/crypto.png",
-    technologies: ["Node.js", "WebSockets", "Blockchain", "PostgreSQL"],
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "e-Limu Learning Platform",
-    description: "EdTech platform with Paystack payments, scheduling subsystem, and product analytics integration.",
-    image: "/portfolio/elimu.png",
-    technologies: ["React", "Node.js", "Paystack", "Mixpanel"],
     featured: false,
   },
 ];

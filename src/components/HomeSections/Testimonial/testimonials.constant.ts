@@ -8,49 +8,49 @@ export interface Testimonials {
 export const testimonials: Testimonials[] = [
   {
     id: 1,
-    company: "Instagram",
+    company: "Chidi Okafor",
     testimony:
       "I am very impressed with the quality of work PraiseDev delivered. I will definitely recommend them to my friends.",
     image: "/homepage/testimonials/testimonial4.png",
   },
   {
     id: 2,
-    company: "Facebook",
+    company: "Grace Desmond",
     testimony:
       "I am very impressed with the quality of work PraiseDev delivered. I will definitely recommend them to my friends.",
     image: "/homepage/testimonials/testimonial2.png",
   },
   {
     id: 3,
-    company: "Twitter",
+    company: "Sarah Mitchell",
     testimony:
       "PraiseDev is the best web development agency I have ever worked with. They are very professional and deliver on time.",
     image: "/homepage/testimonials/testimonial3.png",
   },
   {
     id: 4,
-    company: "Vitagreen",
+    company: "Adebayo Adeyemi",
     testimony:
       "Working with PraiseDev company has been a game-changer for our business. Their expertise and commitment to our success have brought tangible results and we couldn't be happier",
     image: "/homepage/testimonials/testimonial1.png",
   },
   {
     id: 5,
-    company: "LinkedIn",
+    company: "Bryan Eze",
     testimony:
       "PraiseDev is the best web development agency I have ever worked with. They are very professional and deliver on time.",
     image: "/homepage/testimonials/testimonial5.png",
   },
   {
     id: 6,
-    company: "Google",
+    company: "Kabir Tijani",
     testimony:
       "I am very impressed with the quality of work PraiseDev delivered. I will definitely recommend them to my friends.",
     image: "/homepage/testimonials/testimonial6.png",
   },
   {
     id: 7,
-    company: "Amazon",
+    company: "Blessing Ugboke",
     testimony:
       "PraiseDev is the best web development agency I have ever worked with. They are very professional and deliver on time.",
     image: "/homepage/testimonials/testimonial7.png",

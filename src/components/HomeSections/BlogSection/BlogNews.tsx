@@ -80,7 +80,7 @@ const BlogNews: FC<BlogNewsProps> = ({}) => {
         </div>
       </div>
 
-      <Link href="/blog">
+      {/* <Link href="/blog">
         <Button
           variant="secondary"
           size="sm"
@@ -88,7 +88,7 @@ const BlogNews: FC<BlogNewsProps> = ({}) => {
         >
           View all
         </Button>
-      </Link>
+      </Link> */}
     </div>
   );
 };

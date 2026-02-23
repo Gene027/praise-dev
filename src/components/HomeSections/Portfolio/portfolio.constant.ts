@@ -8,7 +8,7 @@ export const portfolioSlides: PortfolioSlide[] = [
   {
     id: 1,
     link: "https://www.google.com",
-    logo: "/homepage/portfolio/portfolio1.png",
+    logo: "/portfolio/ontop.png",
   },
   {
     id: 1,

@@ -40,18 +40,18 @@ const BlogCard = ({ blog }: BlogCardProps) => {
         <Paragraph className="text-subText text-sm md:text-base font-raleway">
           {description}
         </Paragraph>
-        <div className="flex gap-2">
+        <div className="flex gap-2 items-center">
           <RiCalendarLine className="w-[14px] h-[14px]" />
           <Paragraph className="text-subText text-sm font-raleway">
             {date}
           </Paragraph>
         </div>
-        <Link href={"/blog"} className="flex gap-1 items-center group mt-auto">
+        {/* <Link href={"/blog"} className="flex gap-1 items-center group mt-auto">
           <span className="text-primary group-hover:text-[#B03A26] font-raleway font-semibold text-lg md:text-xl">
             Read more
           </span>
           <FaArrowRightLong className="text-primary group-hover:text-[#B03A26] w-4 h-4" />
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

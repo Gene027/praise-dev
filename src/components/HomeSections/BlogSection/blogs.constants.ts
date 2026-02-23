@@ -17,7 +17,7 @@ export const blogs: Blog[] = [
       "Discover how a user-centered approach to design can elevate your digital presence and create meaningful connections.",
     date: "June 10, 2021",
     image: "/homepage/blog/blog1.png",
-    authorImage: '/homepage/testimonials/testimonial4.png'
+    authorImage: '/Profile_Headshot.jpeg'
   },
   {
     id: "02",
@@ -27,7 +27,7 @@ export const blogs: Blog[] = [
       "Explore exciting world of web 3.0, where blockchain technology and decentralized apps are reshaping the internet",
     date: "June 10, 2021",
     image: "/homepage/blog/blog2.png",
-    authorImage: '/homepage/testimonials/testimonial4.png'
+    authorImage: '/Profile_Headshot.jpeg'
   },
   {
     id: "03",
@@ -37,6 +37,6 @@ export const blogs: Blog[] = [
       "Learn the essential steps to turn your app idea into reality and successfully launch it in today’s competitive app market.",
     date: "June 10, 2021",
     image: "/homepage/blog/blog3.png",
-    authorImage: '/homepage/testimonials/testimonial4.png'
+    authorImage: '/Profile_Headshot.jpeg'
   },
 ];

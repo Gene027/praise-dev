@@ -16,10 +16,10 @@ const CallToAction: FC<CallToActionProps> = ({}) => {
       />
       <div className="flex flex-col max-w-[320px] sm:max-w-[384px] gap-6 sm:gap-8 items-center relative z-10 mb-6 sm:mb-0">
         <Paragraph className="font-dmSerifDisplay text-bg text-2xl sm:text-4xl text-center leading-tight">
-          Enough Talk Let's Build Something
+          Enough Talk Let&apos;s Build Something
         </Paragraph>
         <Paragraph className="text-light font-raleway text-sm sm:text-base font-medium text-center leading-relaxed">
-          What kind of website would you like , let's get you started to boost
+          What kind of website would you like , let&apos;s get you started to boost
           your business
         </Paragraph>
         <Link href="/contact">

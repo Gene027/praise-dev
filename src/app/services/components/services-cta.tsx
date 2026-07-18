@@ -26,8 +26,8 @@ const ServicesCTA: FC = () => {
                   Ready to bring your idea to life?
                 </LargeHeading>
                 <Paragraph className="font-raleway text-white/80 text-lg max-w-xl">
-                  Let's discuss your project requirements and create a solution that
-                  exceeds your expectations. I'm here to help turn your vision into reality.
+                  Let&apos;s discuss your project requirements and create a solution that
+                  exceeds your expectations. I&apos;m here to help turn your vision into reality.
                 </Paragraph>
               </div>
 

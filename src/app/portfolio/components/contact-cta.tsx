@@ -24,10 +24,10 @@ const ContactCTA: FC = () => {
                   size="sm"
                   className="font-dmSerifDisplay text-white mb-4"
                 >
-                  Let's build something amazing together
+                  Let&apos;s build something amazing together
                 </LargeHeading>
                 <Paragraph className="font-raleway text-white/80 text-lg max-w-xl">
-                  I'm always open to discussing new projects, creative ideas, or
+                  I&apos;m always open to discussing new projects, creative ideas, or
                   opportunities to be part of your vision.
                 </Paragraph>
               </div>

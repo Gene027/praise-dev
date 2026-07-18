@@ -84,7 +84,7 @@ const PricingSection: FC = () => {
           <Paragraph className="font-raleway text-subText">
             Need a custom solution?{" "}
             <Link href="/contact" className="text-primary font-semibold hover:underline">
-              Let's discuss your project
+              Let&apos;s discuss your project
             </Link>
           </Paragraph>
         </div>

@@ -25,7 +25,7 @@ const BlogNews: FC<BlogNewsProps> = ({}) => {
       <TitleTag title="Blog" description="Our Blog" />
       
       {/* Desktop Layout - All cards visible */}
-      <div className="hidden md:flex w-full max-w-5xl justify-center gap-[40px]">
+      <div className="hidden md:grid w-full max-w-6xl grid-cols-2 xl:grid-cols-4 gap-6 px-6">
         {blogs.map((blog) => (
           <BlogCard key={blog.id} blog={blog} />
         ))}
@@ -80,7 +80,7 @@ const BlogNews: FC<BlogNewsProps> = ({}) => {
         </div>
       </div>
 
-      {/* <Link href="/blog">
+      <Link href="/blog">
         <Button
           variant="secondary"
           size="sm"
@@ -88,7 +88,7 @@ const BlogNews: FC<BlogNewsProps> = ({}) => {
         >
           View all
         </Button>
-      </Link> */}
+      </Link>
     </div>
   );
 };

@@ -17,6 +17,9 @@ const QuickLinks = () => {
         <Link href="/services" className="text-bg font-raleway text-xs md:text-sm hover:text-primary transition-colors duration-200">
           Services
         </Link>
+        <Link href="/blog" className="text-bg font-raleway text-xs md:text-sm hover:text-primary transition-colors duration-200">
+          Blog
+        </Link>
         <Link href="/contact" className="text-bg font-raleway text-xs md:text-sm hover:text-primary transition-colors duration-200">
           Contact Us
         </Link>

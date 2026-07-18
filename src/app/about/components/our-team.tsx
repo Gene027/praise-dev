@@ -13,7 +13,7 @@ const OurTeam: FC<OurTeamProps> = ({}) => {
       <div className="flex max-w-[487px] w-full flex-col gap-5 items-center px-4 lg:px-0">
         <TitleTag title="Our Team" description="The people behind PraiseDev" />
         <Paragraph className="text-center font-dmSerifDisplay text-[24px] sm:text-[28px] lg:text-[32px]">
-          A new site for your agency? It's here.
+          A new site for your agency? It&apos;s here.
         </Paragraph>
       </div>
 

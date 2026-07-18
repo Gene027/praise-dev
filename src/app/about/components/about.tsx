@@ -19,7 +19,7 @@ const AboutUs: FC<AboutUsProps> = ({}) => {
         <div className="lg:pl-[100px] px-4 lg:px-0 max-w-3xl flex flex-col gap-8 mt-8 lg:mt-[132px]">
           <div className="flex flex-col gap-6">
             <LargeHeading className="font-dmSerifDisplay text-text text-[28px] sm:text-[36px] lg:text-[44px] leading-tight">
-              We're a team of creators & innovators
+              We&apos;re a team of creators & innovators
             </LargeHeading>
             <Paragraph className="font-raleway text-sm sm:text-base">
               We help startups like yours grow revenue and improve customer
@@ -66,7 +66,7 @@ const AboutUs: FC<AboutUsProps> = ({}) => {
             size={"sm"}
             className="font-dmSerifDisplay text-text text-center text-[24px] sm:text-[28px] lg:text-[32px]"
           >
-            A new site for your agency? It's here.
+            A new site for your agency? It&apos;s here.
           </LargeHeading>
           <Paragraph className="font-raleway text-center text-sm sm:text-base">
             Our company thrives on unity in diversity, with a nationwide team

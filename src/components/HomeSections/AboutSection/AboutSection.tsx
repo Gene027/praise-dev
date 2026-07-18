@@ -17,7 +17,7 @@ const About: FC = () => {
             <div className="flex flex-col w-full gap-[20px]">
               <TitleTag title={"About"} description={"Get to know PraiseDev"} />
               <Paragraph className="font-dmSerifDisplay text-[28px] md:text-[40px] font-normal leading-tight">
-                A new site for your agency? It's here.
+                A new site for your agency? It&apos;s here.
               </Paragraph>
 
               <div className="flex flex-col gap-4 md:gap-6">

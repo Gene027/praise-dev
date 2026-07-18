@@ -14,19 +14,17 @@ interface NavbarProps {
 
 const Navbar: FC<NavbarProps> = ({ className }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [mounted, setMounted] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
   const currentPath = pathname.split('/')[1]
 
   useEffect(() => {
-    setMounted(true)
-    
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10
       setScrolled(isScrolled)
     }
 
+    handleScroll()
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -57,37 +55,6 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
     setIsMobileMenuOpen(false)
   }
 
-  if (!mounted) {
-    return (
-      <nav className={cn(
-        'fixed top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100',
-        className
-      )} style={{ position: 'fixed' }}>
-        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 py-3">
-          <div className="flex w-full justify-between items-center">
-            <Link href="/" className="flex-shrink-0">
-              <img 
-                src="/logo.png" 
-                alt="PraiseDev Logo" 
-                className="w-[96px] h-[52px] object-contain"
-                loading="eager"
-              />
-            </Link>
-            <div className="flex items-center gap-4">
-              <div className="hidden lg:flex items-center gap-8">
-                {navLinks.map((link) => (
-                  <div key={link.id} className="h-6 w-16 bg-gray-200 animate-pulse rounded" />
-                ))}
-              </div>
-              <div className="hidden lg:block w-[190px] h-[52px] bg-gray-200 animate-pulse rounded-xl" />
-              <div className="lg:hidden w-6 h-6 bg-gray-200 animate-pulse rounded" />
-            </div>
-          </div>
-        </div>
-      </nav>
-    )
-  }
-
   return (
     <>
       <nav className={cn(
@@ -108,7 +75,7 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
               <img 
                 src="/logo.png" 
                 alt="PraiseDev Logo" 
-                className="w-[96px] h-[52px] object-contain"
+                className="w-[52px] h-[52px] object-contain"
                 loading="eager"
               />
             </Link>
@@ -162,80 +129,76 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
       <div className="h-[76px]" />
 
       {/* Mobile Menu Overlay */}
-      {mounted && (
-        <>
-          {/* Backdrop */}
-          <div
-            className={cn(
-              'fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300',
-              isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-            )}
-            onClick={toggleMobileMenu}
-            aria-hidden="true"
-          />
+      {/* Backdrop */}
+      <div
+        className={cn(
+          'fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300',
+          isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        )}
+        onClick={toggleMobileMenu}
+        aria-hidden="true"
+      />
 
-          {/* Mobile Menu */}
-          <div
-            className={cn(
-              'fixed top-0 left-0 h-full w-[300px] sm:w-[350px] bg-white z-50 transform transition-transform duration-300 ease-out lg:hidden shadow-2xl',
-              isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
-            )}
-            role="dialog"
-            aria-modal="true"
-            aria-label="Mobile navigation menu"
+      {/* Mobile Menu */}
+      <div
+        className={cn(
+          'fixed top-0 left-0 h-full w-[300px] sm:w-[350px] bg-white z-50 transform transition-transform duration-300 ease-out lg:hidden shadow-2xl',
+          isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+        )}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation menu"
+      >
+        {/* Mobile Menu Header */}
+        <div className="flex items-center justify-between p-6 border-b border-gray-100">
+          <Link
+            href="/"
+            onClick={handleLinkClick}
+            className="transition-transform hover:scale-105 duration-200"
           >
-            {/* Mobile Menu Header */}
-            <div className="flex items-center justify-between p-6 border-b border-gray-100">
-              <Link 
-                href="/" 
-                onClick={handleLinkClick}
-                className="transition-transform hover:scale-105 duration-200"
-              >
-                <img 
-                  src="/logo.png" 
-                  alt="PraiseDev Logo" 
-                  className="w-[80px] h-[43px] object-contain" 
-                />
-              </Link>
-              <button
-                onClick={toggleMobileMenu}
-                className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                aria-label="Close menu"
-              >
-                <HiX size={20} className="text-text" />
-              </button>
-            </div>
+            <img
+              src="/logo.png"
+              alt="PraiseDev Logo"
+              className="w-[44px] h-[44px] object-contain"
+            />
+          </Link>
+          <button
+            onClick={toggleMobileMenu}
+            className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+            aria-label="Close menu"
+          >
+            <HiX size={20} className="text-text" />
+          </button>
+        </div>
 
-            {/* Mobile Menu Navigation */}
-            <nav className="flex flex-col pt-6">
-              {navLinks.map((link, index) => {
-                const isActive = currentPath === link.id
-                return (
-                  <Link
-                    key={link.id}
-                    href={`/${link.id}`}
-                    onClick={handleLinkClick}
-                    className={cn(
-                      'relative px-6 py-4 text-lg font-raleway font-medium transition-all duration-200 border-l-4',
-                      isActive 
-                        ? 'text-primary bg-primary/5 border-primary' 
-                        : 'text-subText hover:text-primary hover:bg-gray-50 border-transparent hover:border-primary/30'
-                    )}
-                    style={{ animationDelay: `${index * 50}ms` }}
-                  >
-                    <span className="capitalize">{link.title}</span>
-                    {isActive && (
-                      <div className="absolute right-4 top-1/2 -translate-y-1/2">
-                        <div className="w-2 h-2 bg-primary rounded-full" />
-                      </div>
-                    )}
-                  </Link>
-                )
-              })}
-            </nav>
-          </div>
-        </>
-      )}
+        {/* Mobile Menu Navigation */}
+        <nav className="flex flex-col pt-6">
+          {navLinks.map((link, index) => {
+            const isActive = currentPath === link.id
+            return (
+              <Link
+                key={link.id}
+                href={`/${link.id}`}
+                onClick={handleLinkClick}
+                className={cn(
+                  'relative px-6 py-4 text-lg font-raleway font-medium transition-all duration-200 border-l-4',
+                  isActive
+                    ? 'text-primary bg-primary/5 border-primary'
+                    : 'text-subText hover:text-primary hover:bg-gray-50 border-transparent hover:border-primary/30'
+                )}
+                style={{ animationDelay: `${index * 50}ms` }}
+              >
+                <span className="capitalize">{link.title}</span>
+                {isActive && (
+                  <div className="absolute right-4 top-1/2 -translate-y-1/2">
+                    <div className="w-2 h-2 bg-primary rounded-full" />
+                  </div>
+                )}
+              </Link>
+            )
+          })}
+        </nav>
+      </div>
     </>
   )
 }

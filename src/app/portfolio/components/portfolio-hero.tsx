@@ -24,7 +24,7 @@ const PortfolioHero: FC = () => {
             </div>
 
             <LargeHeading className="font-dmSerifDisplay text-text text-4xl lg:text-6xl leading-tight">
-              Hi, I'm{" "}
+              Hi, I&apos;m{" "}
               <span className="text-primary">Praise Anosike</span>
             </LargeHeading>
 
@@ -41,6 +41,14 @@ const PortfolioHero: FC = () => {
                   Get in Touch
                 </Button>
               </Link>
+              <a
+                href="/portfolio/Praise_Anosike_Resume_2026-05-30.pdf"
+                download
+                className="inline-flex h-[52px] min-w-[150px] items-center justify-center rounded-[12px] border-[1.5px] border-solid border-primary px-4 text-sm font-medium text-primary transition-colors hover:border-[#B03A26] hover:text-[#B03A26] lg:min-w-[190px] lg:text-lg"
+              >
+                <FiDownload className="mr-2" />
+                Download CV
+              </a>
             </div>
 
             <div className="flex items-center gap-4 mt-4">

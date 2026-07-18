@@ -7,7 +7,9 @@ export const metadata: Metadata = {
   title: 'PraiseDev | Home',
   description: 'Digital dreams built',
   icons: {
-    icon: '/logo.png'
+    icon: '/favicon.svg',
+    shortcut: '/favicon-32x32.png',
+    apple: '/apple-touch-icon.png',
   }
 }
 

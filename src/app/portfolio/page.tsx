@@ -14,7 +14,9 @@ export const metadata: Metadata = {
   description:
     "Praise Anosike - Software Engineer with 7+ years of experience building secure, scalable products across gaming, fintech, e-commerce, and edtech.",
   icons: {
-    icon: "/logo.png",
+    icon: "/favicon.svg",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "Praise Anosike | Software Engineer Portfolio",

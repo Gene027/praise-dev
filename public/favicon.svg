@@ -1,0 +1,18 @@
+<svg width="64" height="64" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="badgeFill" x1="20" y1="18" x2="108" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD95E"/>
+      <stop offset="1" stop-color="#F6AA00"/>
+    </linearGradient>
+    <linearGradient id="badgeShine" x1="30" y1="20" x2="82" y2="88" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="12" y="12" width="104" height="104" rx="28" fill="url(#badgeFill)"/>
+  <rect x="12" y="12" width="104" height="104" rx="28" fill="url(#badgeShine)"/>
+  <path d="M72 25L50.5 47.2C43 55 39.5 63.4 39.5 75V78.6C39.5 85.2 42 91.3 46.8 95.8L64 104L87.8 89.4C93.4 84.1 96 77.2 96 69.7C96 63.1 93.8 57.5 89.7 52.9L85.8 48.8" stroke="#1E1513" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M62 40H84.5C92 40 97 45.3 97 52.4C97 57 94.8 60.8 90.8 64L83.8 69.7C78.5 74 76 79.6 76 86.5V87L62 100V73.5L53.5 81.5V59.5C53.5 48.3 56.7 40 62 40Z" fill="#1E1513"/>
+  <path d="M92 39L56 83" stroke="#F7B313" stroke-width="5.4" stroke-linecap="round"/>
+  <path d="M71 59H84" stroke="#F7B313" stroke-width="4.8" stroke-linecap="round"/>
+</svg>

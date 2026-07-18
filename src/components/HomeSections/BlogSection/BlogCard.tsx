@@ -10,14 +10,17 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ blog }: BlogCardProps) => {
-  const { author, title, description, date, image, authorImage } = blog;
+  const { author, title, description, date, image, authorImage, slug, readTime } = blog;
   return (
-    <div className="flex flex-col flex-1 w-full md:w-[283px] rounded-lg bg-bg min-h-[500px] md:min-h-auto">
+    <Link
+      href={`/blog#${slug}`}
+      className="group flex flex-col flex-1 w-full rounded-lg bg-bg min-h-[500px] md:min-h-auto overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+    >
       <div className="relative w-full">
         <img
           src={image}
           alt={title}
-          className="w-full h-[200px] md:h-[232px] object-cover rounded-t-lg"
+          className="w-full h-[200px] md:h-[232px] object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 w-full p-4 md:p-5 flex items-end">
           <div className="flex gap-2 bg-bg p-2 rounded-[100px] min-w-[140px] md:min-w-[161px] h-[32px] md:h-[36px] items-center">
@@ -34,26 +37,31 @@ const BlogCard = ({ blog }: BlogCardProps) => {
       </div>
 
       <div className="w-full flex-1 z-20 mt-[-5px] p-4 md:p-5 rounded-lg flex flex-col gap-4 md:gap-5">
-        <Paragraph className="font-dmSerifDisplay text-lg md:text-xl text-text">
+        <Paragraph className="font-dmSerifDisplay text-lg md:text-xl text-text group-hover:text-primary transition-colors duration-200">
           {title}
         </Paragraph>
         <Paragraph className="text-subText text-sm md:text-base font-raleway">
           {description}
         </Paragraph>
-        <div className="flex gap-2 items-center">
-          <RiCalendarLine className="w-[14px] h-[14px]" />
+        <div className="flex flex-wrap gap-3 items-center text-subText">
+          <div className="flex gap-2 items-center">
+            <RiCalendarLine className="w-[14px] h-[14px]" />
+            <Paragraph className="text-subText text-sm font-raleway">
+              {date}
+            </Paragraph>
+          </div>
           <Paragraph className="text-subText text-sm font-raleway">
-            {date}
+            {readTime}
           </Paragraph>
         </div>
-        {/* <Link href={"/blog"} className="flex gap-1 items-center group mt-auto">
+        <div className="flex gap-1 items-center group mt-auto">
           <span className="text-primary group-hover:text-[#B03A26] font-raleway font-semibold text-lg md:text-xl">
             Read more
           </span>
-          <FaArrowRightLong className="text-primary group-hover:text-[#B03A26] w-4 h-4" />
-        </Link> */}
+          <FaArrowRightLong className="text-primary group-hover:text-[#B03A26] w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -14,7 +14,9 @@ export const metadata: Metadata = {
   description:
     "Practical articles on design, software development, mobile apps, Web3, and AI from PraiseDev.",
   icons: {
-    icon: "/logo.png",
+    icon: "/favicon.svg",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "PraiseDev Blog",

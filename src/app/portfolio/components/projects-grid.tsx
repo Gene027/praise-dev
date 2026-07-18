@@ -53,6 +53,7 @@ const ProjectsGrid: FC = () => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`View live project for ${project.title}`}
                       className="p-2 bg-white rounded-lg hover:bg-primary hover:text-white transition-colors"
                     >
                       <FiExternalLink size={18} />
@@ -63,6 +64,7 @@ const ProjectsGrid: FC = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`View GitHub repository for ${project.title}`}
                       className="p-2 bg-white rounded-lg hover:bg-primary hover:text-white transition-colors"
                     >
                       <FiGithub size={18} />
@@ -94,6 +96,19 @@ const ProjectsGrid: FC = () => {
                     </span>
                   )}
                 </div>
+
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-flex items-center gap-2 font-raleway text-sm font-bold text-primary transition-colors hover:text-text"
+                    aria-label={`View live project for ${project.title}`}
+                  >
+                    View live
+                    <FiExternalLink size={16} />
+                  </a>
+                )}
               </div>
             </div>
           ))}

@@ -87,11 +87,12 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     id: 2,
-    title: "Ekklesia Music Streaming",
-    description: "Radio-style streaming platform with admin workflow to schedule playlists/programs and content management dashboard.",
-    image: "/portfolio/ekklesia.png",
-    technologies: ["React", "Node.js", "PostgreSQL", "Redis", "WebSockets"],
-    featured: true,
+    title: "TeamBoard",
+    description: "Internal project planning app with projects, tasks, workflow stages, comments, role-based project users, and task assignment.",
+    image: "/portfolio/teamboard.png",
+    technologies: ["Next.js", "React", "Node.js", "PostgreSQL", "RBAC"],
+    link: "https://team-board-rosy-seven.vercel.app",
+    featured: false,
   },
   {
     id: 6,
@@ -99,6 +100,7 @@ export const projects: Project[] = [
     description: "EdTech platform with Paystack payments, scheduling subsystem, and product analytics integration.",
     image: "/portfolio/elimu.png",
     technologies: ["React", "Node.js", "Paystack", "Mixpanel"],
+    link: "https://app.e-limu.org/",
     featured: true,
   },
   {
@@ -107,6 +109,7 @@ export const projects: Project[] = [
     description: "Cryptocurrency payment platform supporting BTC, LTC, ALGO, USDT, TRON, SOL with automated reconciliation.",
     image: "/portfolio/crypto.png",
     technologies: ["Node.js", "WebSockets", "Blockchain", "PostgreSQL"],
+    link: "https://www.kidapay.com/",
     featured: true,
   },
   {
@@ -123,7 +126,8 @@ export const projects: Project[] = [
     description: "Multi-region gaming platform with affiliate system, KYC operations, and tournament management across 5 African countries.",
     image: "/portfolio/choplife.png",
     technologies: ["NestJS", "React", "PostgreSQL", "RabbitMQ", "Redis"],
-    featured: false,
+    link: "https://www.chopwin.gm/",
+    featured: true,
   },
   {
     id: 4,
@@ -131,6 +135,7 @@ export const projects: Project[] = [
     description: "Enterprise wholesale platform with competitive pricing intelligence, inventory management, and customer operations.",
     image: "/portfolio/eze.png",
     technologies: ["Next.js", "NestJS", "Puppeteer", "PostgreSQL"],
+    link: "https://www.ezewholesale.com/",
     featured: false,
   },
 ];

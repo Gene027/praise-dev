@@ -75,7 +75,7 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
               <img 
                 src="/logo.png" 
                 alt="PraiseDev Logo" 
-                className="w-[96px] h-[52px] object-contain"
+                className="w-[52px] h-[52px] object-contain"
                 loading="eager"
               />
             </Link>
@@ -159,7 +159,7 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
             <img
               src="/logo.png"
               alt="PraiseDev Logo"
-              className="w-[80px] h-[43px] object-contain"
+              className="w-[44px] h-[44px] object-contain"
             />
           </Link>
           <button

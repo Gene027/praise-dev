@@ -15,7 +15,9 @@ export const metadata: Metadata = {
   description:
     "Professional software development services including backend APIs, frontend applications, mobile apps, cloud infrastructure, and payment integrations.",
   icons: {
-    icon: "/logo.png",
+    icon: "/favicon.svg",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "Software Development Services | PraiseDev",

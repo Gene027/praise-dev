@@ -32,6 +32,8 @@
     "@types/node": "20.2.5",
     "@types/react": "18.2.8",
     "@types/react-dom": "18.2.4",
+    "eslint-config-next": "13.4.4",
+    "sharp": "^0.35.3",
     "tailwindcss-animate": "^1.0.5"
   }
 }
